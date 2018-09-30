@@ -1,0 +1,19 @@
+<form class='body' bindsubmit='memberLogin'>
+  <image src='../../images/login.png'></image>
+  <view class='input'>
+    <view class='userName'>
+      <image src='../../images/phone.png'></image>
+      <input placeholder='请输入手机号' type='text' name='userName'></input>
+    </view>
+    <view class='pwd'>
+      <image src='../../images/pwd.png'></image>
+      <input placeholder='请输入手机号' type='passward' password='true' name='pwd'></input>
+    </view>
+    <!-- <input placeholder='请输入密码' type='passward' name='pwd'></input> -->
+  </view>
+  <view class='login'>
+    <button class='member' form-type='submit'>登  入</button>
+    <button class='tourist' bindtap='toMain'>游客登入</button>
+  </view>
+  <navigator class='forget' url='/pages/contact/contact'>忘记密码？</navigator>
+</form>

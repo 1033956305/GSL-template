@@ -1,0 +1,17 @@
+<input placeholder='输入关键字' bindconfirm='search'></input>
+<view class='detailGroup'>
+  <view class='touch-item {{item.isTouchMove ? "touch-move-active" : ""}}' wx:for="{{infoList}}" wx:key="{{index}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+    <view data-id='{{item.id}}' class='infoItem' bindtap="toDetail">
+    <!-- <view class='state'>{{item.state}}</view> -->
+      <text class='h1'>{{item.headline}}</text>
+      <text class='content'>{{item.content}}</text>
+      <text class='time'>{{item.updatetime}}</text>
+    </view>
+    <view class="del" catchtap="del" data-id='{{item.id}}' data-index="{{index}}">删除</view>
+  </view>
+  
+</view>
+<view class='{{noInfo}}'>————  没有更多消息了  ————</view>
+<view class='support'>
+  技术支持由 南京御安神科技有限公司 提供
+</view>

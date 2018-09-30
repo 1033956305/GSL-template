@@ -1,0 +1,8 @@
+<view class='body'>
+  <view class='header'>
+    {{message.headline}}
+  </view>
+  <view class='content'>
+    　　{{message.content}}
+  </view>
+</view>

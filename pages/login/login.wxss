@@ -1,0 +1,60 @@
+page{
+  height: 100%;
+}
+.body, image{
+  height: 100%;
+  width: 100%
+}
+.input{
+  position: absolute;
+  bottom: 375rpx;
+  width: 100%;
+  /* left: 193rpx; */
+}
+.input>input:first-child{
+  margin-bottom: 35rpx
+}
+input{
+  font-size: 0.8rem;
+  color: rgb(173, 173, 173);
+  margin-top:20rpx;
+  display:block;
+  margin-left:120rpx;
+}
+.login{
+  position: absolute;
+  bottom:90rpx;
+  margin-left:22%;
+  width: 56%
+}
+.login>button:first-child{
+  margin-bottom:35rpx;
+  background: #1DABED;
+}
+button{
+  height:2rem;
+  width: 100%;
+  line-height:2rem;
+  background: #FBE32A;
+  color: #fff
+}
+.forget{
+  position:absolute;
+  bottom:325rpx;
+  right:50rpx;
+  color:#1DB294;
+  font-size:0.8rem;
+}
+.userName>image, .pwd>image{
+  width: 40px;
+  height: 40px;
+  float: left;
+}
+.userName, .pwd{
+  width:74%;
+  margin:0 auto;
+  height:40px;
+  overflow:hidden;
+  padding-bottom: 10rpx;
+  border-bottom: 3rpx solid #eee
+}

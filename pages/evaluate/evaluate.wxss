@@ -1,0 +1,43 @@
+.item{
+  background:#fff;
+  border-bottom:3rpx solid #F5F6F5;
+  margin-top:10rpx;
+  padding:10rpx 15rpx;
+}
+.item>view{
+  font-size:0.7rem;
+color:#aaa;
+}
+.header{
+  color: #000;
+  background: #fff;
+  padding: 20rpx 10rpx
+}
+.item>.user{
+  color: #000
+}
+.seller{
+  width:50%;
+  margin-left:370rpx;
+  margin-top:20rpx;
+}
+.sellerName{
+  text-align:right;
+  color:#000;
+  margin-right:230rpx;
+}
+.support, .noInfo{
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 50rpx;
+}
+.show{
+  margin:350rpx 0;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666;
+}
+.hide{
+  display: none
+}

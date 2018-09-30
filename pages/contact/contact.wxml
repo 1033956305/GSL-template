@@ -1,0 +1,7 @@
+<view class='body'>
+<view>如有问题，请联系管理员</view>
+  <view>手机联系：{{info.mobile || '暂无'}}</view>
+  <view>座机联系电话：{{info.phone || '暂无'}}</view>
+  <view>QQ：{{info.qq || '暂无'}}</view>
+  <view>微信：{{info.wechart || '暂无'}}</view>
+</view>

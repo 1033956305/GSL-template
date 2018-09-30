@@ -1,0 +1,126 @@
+.picker{
+  text-align:center;
+  float:right;
+  margin-right:1rem;
+  border:5rpx solid #923432;
+  padding:0.2rem 1rem;
+  line-height:1rem;
+  border-radius:15rpx;
+  width:55%;
+  position: relative
+}
+.toList{
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left:20rpx solid transparent;
+  border-right:20rpx solid transparent;
+  border-top:20rpx solid #923432;
+  margin-top: 15px;
+  top:-11rpx;
+  right:15rpx;
+}
+picker{
+  text-align:center;
+  line-height: 1.5rem;
+  /* margin-top: 10rpx; */
+}
+page{
+  box-sizing: border-box
+}
+.touch-item {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 40rpx auto;
+}
+.infoItem{
+  /* border: 5rpx solid #666; */
+  width: 100%;
+  height:3.5rem;
+  background: #fff;
+  padding:20rpx 0 20rpx 50rpx;
+  position: relative;
+  margin-right:0;
+
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px
+}
+.touch-move-active .infoItem,
+
+.touch-move-active .del {
+
+-webkit-transform: translateX(0);
+transform: translateX(0);
+
+}
+.del{
+  background-color: orangered;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  height: 4.5rem;
+}
+.state{
+  float:left;
+  margin-left:1.5rem;
+  line-height: 3.5rem;
+  margin-right: 0.5rem;
+  font-size:28rpx;
+  color: #aaa
+}
+.h1{
+  display: block;
+  margin-bottom: 1.5rem;
+  text-align: left
+}
+.time{
+  position:absolute;
+  right:0.5rem;
+  color:#aaa;
+  font-size:32rpx;
+  top: 35rpx;
+}
+.detailGroup{
+  margin-top: 15px
+}
+
+.content{
+  color: #aaa;
+  font-size: 30rpx
+}
+input{
+  background:#fff;
+  font-size:0.8rem;
+  margin:20rpx;
+  text-align:center;
+  border-radius: 10rpx
+}
+.support, .noInfo{
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 50rpx;
+}
+.show{
+  margin:350rpx 0;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666;
+}
+.hide{
+  display: none
+}

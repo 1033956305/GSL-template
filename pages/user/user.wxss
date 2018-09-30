@@ -1,0 +1,36 @@
+.header{
+    position: relative;
+    height: 250rpx;
+    line-height: 100rpx;
+    padding:30rpx 30rpx 30rpx 30rpx;
+    box-sizing: border-box;
+    background: #AB956D;
+    font-size: 28rpx;
+    color: #fff;
+    text-align: center;
+}
+.header .thumb{
+    /* position: absolute;
+    left: 30rpx;
+    top: 30rpx; */
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+.nickname{
+  display: block
+}
+.header .about{
+    float: right;
+}
+.user-infos{
+  background: #fff
+}
+.user-infos>view{
+  padding:15rpx 30rpx;
+  border-bottom:3rpx dashed #000;
+  color: #aaa;
+}
+.user-infos>.name{
+  color: #000;
+}

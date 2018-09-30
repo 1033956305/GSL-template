@@ -1,0 +1,17 @@
+<!-- 订单列表 -->
+<view class='list'>
+  <view class='list-item' wx:for='{{orderList}}' wx:key='index' bindtap='toProduct' data-id='{{item.id}}'>
+    <image src='{{"https://cs.royalsecurity.cn/production/" + item.minipicUrl}}'></image>
+    <view class='item-content'>
+      <view class='title'>{{item.name}}</view>
+      <view class='detail'>
+      <text>{{item.introduction}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='{{nomore}}'>没有搜索到对应商品</view>
+<view class='{{noInfo}}'>————  没有更多数据了  ————</view>
+<view class='support'>
+  技术支持由 南京御安神科技有限公司 提供
+</view>

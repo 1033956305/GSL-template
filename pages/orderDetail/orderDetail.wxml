@@ -1,0 +1,23 @@
+<image src='{{"https://cs.royalsecurity.cn/production/" + product.pictureUrl}}'  data-id='{{product.id}}' bindtap='toProduct'></image>
+<view class='product-infos'>
+  <view class='name more' data-id='{{product.id}}' bindtap='toProduct'>名称：{{product.name}}</view>
+  <view>介绍：{{product.introduction || '无'}}</view>
+  <view>型号：{{product.model || '无'}}</view>
+  <view>用途：{{product.puropose || '无'}}</view>
+  <view>体积：{{product.volume || '无'}}</view>
+  <view>生产厂商：{{product.manufacturer || '匿名'}}</view>
+  <view class='more' data-concat='0' bindtap='toSeller'>卖方：{{product.nickname || '匿名'}}</view>
+  <view>手机联系：{{contactSell.phone || '无'}}</view>
+  <view>座机联系电话：{{contactSell.tel || '无'}}</view>
+  <view>QQ：{{contactSell.qq || '无'}}</view>
+  <view>微信：{{contactSell.wechat || '无'}}</view>
+  <view class='more' data-concat='1' bindtap='toSeller'>买方：{{contactBuy.nickname || '匿名'}}</view>
+  <view>手机联系：{{contactBuy.phone || '无'}}</view>
+  <view>座机联系电话：{{contactBuy.tel || '无'}}</view>
+  <view>QQ：{{contactBuy.qq || '无'}}</view>
+  <view>微信：{{contactBuy.wechat || '无'}}</view>
+</view>
+<view class='button'>
+  <button bindtap='cancel'>{{btn1}}</button>
+  <button bindtap='confirm'>{{btn2}}</button>
+</view>

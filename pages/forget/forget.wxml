@@ -1,0 +1,4 @@
+<view class='body'>
+  <image src='../../images/login.png'></image>
+  <view class='contact'></view>
+</view>

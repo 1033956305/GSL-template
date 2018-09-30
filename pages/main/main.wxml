@@ -1,0 +1,43 @@
+<!--pages/main/main.wxml-->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{'https://cs.royalsecurity.cn/production/' + item.picture}}" class="slide-image" data-id='{{item.id}}' width="355" height="150" bindtap='toMsg'/>
+    </swiper-item>
+  </block>
+</swiper>
+<view class='search'>
+  <input placeholder='输入关键字进行搜索' bindconfirm='toSearch'></input>
+</view>
+<view class='classify white'>
+  <view class='item' wx:for="{{classify}}" wx:key='index' bindtap='toClassify' data-type='{{item.content}}'>
+    <image src='{{item.src}}' class='item-image'></image>
+    <text>{{item.content}}</text>
+  </view>
+</view>
+<view class='hot'  data-content='{{hot.content}}' bindtap='toProductList'>
+  <view class='h2'>
+    <view class='h1'>优秀企业展示</view>
+  </view>
+  <image src='{{"https://cs.royalsecurity.cn/production/" + hot.pictureUrl}}'></image>
+  <image src='{{"https://cs.royalsecurity.cn/production/" + hot.pictureUrl}}'></image>
+</view>
+<view class='hot'  data-content='{{hot.content}}' bindtap='toProductList'>
+  <view class='h2'>
+    <text class='red'>热</text>点 | 欢迎前来体验
+  </view>
+  <image src='{{"https://cs.royalsecurity.cn/production/" + hot.pictureUrl}}'></image>
+</view>
+<view class='recommend'>
+  <view class='h1'>店长推荐</view>
+  <view class='recommend-item' wx:for='{{recommends}}' data-id='{{item.id}}' wx:key='index' bindtap='toProduct'>
+    <image src='{{"https://cs.royalsecurity.cn/production/" + item.minipicUrl}}'></image>
+    <view>
+      {{item.name}}
+      <image class='shop-img' src='../../images/shop.png'></image>
+    </view>
+  </view>
+</view>
+<view class='support'>
+  技术支持由 南京御安神科技有限公司 提供
+</view>

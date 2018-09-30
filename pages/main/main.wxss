@@ -1,0 +1,88 @@
+/* pages/main/main.wxss */
+image{
+  width: 100%
+}
+swiper{
+  height: 350rpx
+}
+input{
+  background:#fff;
+  font-size:0.8rem;
+  margin:20rpx;
+  text-align:center;
+  border-radius: 10rpx;
+}
+.white{
+  background: #fff
+}
+.item-image{
+  width: 100rpx;
+  height: 100rpx
+}
+.item{
+  width:130rpx;
+  text-align:center;
+  font-size:0.7rem;
+  float:left;
+  color: #555;
+  margin: 10rpx
+}
+.classify::after{
+  content: '';
+  clear: both;
+  display: block
+}
+.item>text{
+  display: block
+}
+.h2{
+  font-size: 0.7rem;
+  margin: 15rpx;
+}
+.hot>image{
+  margin-top: 30rpx;
+  height: 360rpx;
+}
+.recommend-item::after, .recommend::after{
+  content: '';
+  clear: both;
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+.recommend-item>image{
+  width: 330rpx;
+  height: 300rpx
+}
+.recommend-item>view{
+  font-size: 0.8rem;
+  padding-left:50rpx;
+  padding-right: 50rpx;
+  display:block;
+  line-height:50rpx;
+  text-align:left;
+  position: relative
+}
+.recommend-item{
+  width: 330rpx;
+  margin: 20rpx 0rpx 20rpx 30rpx;
+  padding-bottom: 20rpx;
+  text-align: center;
+  background: #fff;
+  float: left
+}
+.shop-img{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 15rpx
+}
+.support{
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666
+}
+.h1{
+  text-align: center
+}

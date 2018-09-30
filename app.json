@@ -1,0 +1,68 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/main/main",
+    "pages/toEvaluate/toEvaluate",
+    "pages/forget/forget",
+    "pages/classify/classify",
+    "pages/product/product",
+    "pages/connect/connect",
+    "pages/contact/contact",
+    "pages/evaluate/evaluate",
+    "pages/user/user",
+    "pages/changePassword/changePassword",
+    "pages/orderDetail/orderDetail",
+    "pages/infoDetail/infoDetail",
+    "pages/aboutUnion/aboutUnion",
+    "pages/watchEvaluate/watchEvaluate",
+    "pages/list/list",
+    "pages/infos/infos",
+    "pages/order/order",
+    "pages/about/about",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "enablePullDownRefresh": true,
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "color": "#222",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "工商联",
+        "iconPath": "images/ic_menu_choice_nor.png",
+        "selectedIconPath": "images/ic_menu_choice_pressed.png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "images/ic_menu_sort_nor.png",
+        "selectedIconPath": "images/ic_menu_sort_pressed.png"
+      },
+      {
+        "pagePath": "pages/infos/infos",
+        "text": "消息",
+        "iconPath": "images/ic_menu_topic_nor.png",
+        "selectedIconPath": "images/ic_menu_topic_pressed.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/ic_menu_shoping_nor.png",
+        "selectedIconPath": "images/ic_menu_shoping_pressed.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/ic_menu_me_nor.png",
+        "selectedIconPath": "images/ic_menu_me_pressed.png"
+      }
+    ]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  }
+}

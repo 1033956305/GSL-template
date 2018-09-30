@@ -1,0 +1,12 @@
+.header{
+  text-align: center;
+}
+.body{
+  background: #fff;
+  margin: 15rpx 20rpx;
+  border-radius: 20rpx;
+  padding: 20rpx 15rpx
+}
+.section{
+  font-size: 0.8rem
+}

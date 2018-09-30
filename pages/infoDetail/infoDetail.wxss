@@ -1,0 +1,16 @@
+.content{
+  color: #aaa;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.header{
+  text-align: center
+}
+.body{
+  background: #fff;
+  margin: 10rpx 15rpx;
+  border-radius: 20rpx;
+  padding: 15rpx 20rpx
+}

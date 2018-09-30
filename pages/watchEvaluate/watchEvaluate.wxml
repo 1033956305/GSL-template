@@ -1,0 +1,23 @@
+<view class='body'>
+  <view class='content'>
+    <view class='buyer'>
+      <view>{{evaluation.buyName || '买家'}} 评论:</view>
+      <view class='detail'>
+      　　{{buyer.detail || '暂无评论'}}
+      </view>
+    </view>
+    <view class='seller'>
+      <view>{{evaluation.sellName || '卖家'}} 评论:</view>
+      <view class='detail'>
+        　{{seller.detail || '暂无评论'}}
+      </view>
+    </view>
+    <view class='{{leader?"show":"hide"}}'>
+    领导已评价
+    </view>
+  </view>
+  
+</view>
+<view class='toEvaluate'>
+  <button class='btn {{evaluate}}' bindtap='write'>填写评论</button>
+</view>

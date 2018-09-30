@@ -1,0 +1,16 @@
+<view class="main">
+    <view class="header" bindtap='toUser'>
+        <image src="../../images/user.jpg" class="thumb"></image>
+        <text class="nickname">{{info.nickname || '匿名'}}</text>
+    </view>
+    <view class="address-box">
+        <view class="address-manage">
+            <navigator url="/pages/aboutUnion/aboutUnion">关于商会</navigator>
+        </view>
+    </view>
+    <view class="list-box">
+      <navigator url="/pages/contact/contact">联系方式</navigator>
+      <navigator class='{{roleId === "0" ? "hide" : ""}}' url="/pages/changePassword/changePassword">修改密码</navigator>
+      <navigator url="/pages/login/login" open-type='redirect'>退出登录</navigator>
+    </view>
+</view>

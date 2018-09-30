@@ -1,0 +1,19 @@
+<view class='body'>
+  <view class='total more {{leader?"hide":"show"}}' bindtap='chose'>
+    总体评价: 　　　　{{totalEvaluate}}
+  </view>
+  <view class='total more {{leader?"show":"hide"}} {{state===1 || state === 3 ?"show":"hide" }}' data-type='buyer' bindtap='chose'>
+    买方成员评价: 　　　　{{totalEvaluate1}}
+  </view>
+  <view class='total more {{leader?"show":"hide"}} {{state===2 || state === 3 ?"show":"hide" }}' data-type='seller' bindtap='chose'>
+    卖方成员评价: 　　　　{{totalEvaluate2}}
+  </view>
+  <view class='text {{leader? "hide": "show"}}'>
+    <textarea placeholder='请输入评论...' maxlength='150' bindinput='confirm'>
+
+    </textarea>
+  </view>
+</view>
+<view class='toEvaluate'>
+  <button class='btn {{evaluate}}' bindtap='totalConfirm' bindconfirm='totalConfirm'>确认</button>
+</view>

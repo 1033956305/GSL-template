@@ -1,26 +1,30 @@
 /* pages/main/main.wxss */
 image{
-  width: 100%
+  width: 100%;
+  
 }
 swiper{
   height: 350rpx
 }
 input{
-  background:#fff;
+  background:#E6E6E6;
   font-size:0.8rem;
-  margin:20rpx;
+  margin:25rpx 70rpx;
   text-align:center;
   border-radius: 10rpx;
 }
 .white{
-  background: #fff
+  background: #fff;
+  box-shadow:0 0 5px 4px #DBD9DA;
+  width:92%;
+  margin:48rpx auto;
 }
 .item-image{
   width: 100rpx;
   height: 100rpx
 }
 .item{
-  width:130rpx;
+  width:119rpx;
   text-align:center;
   font-size:0.7rem;
   float:left;
@@ -37,11 +41,21 @@ input{
 }
 .h2{
   font-size: 0.7rem;
-  margin: 15rpx;
+  /* margin: 15rpx 35rpx; */
+}
+.hot>.h2{
+  text-align:left;
+  font-size:1.1rem;
+  font-weight:500;
+  margin:15rpx 35rpx;
 }
 .hot>image{
-  margin-top: 30rpx;
-  height: 360rpx;
+  height:360rpx;
+  border-radius:50rpx;
+  box-shadow:0 0 5px 6px #DBD9DA;
+  margin:25rpx auto 70rpx;
+  width:92%;
+  display:block;
 }
 .recommend-item::after, .recommend::after{
   content: '';
@@ -52,12 +66,12 @@ input{
   visibility: hidden;
 }
 .recommend-item>image{
-  width: 330rpx;
+  width: 100%;
   height: 300rpx
 }
 .recommend-item>view{
   font-size: 0.8rem;
-  padding-left:50rpx;
+  /* padding-left:50rpx; */
   padding-right: 50rpx;
   display:block;
   line-height:50rpx;
@@ -65,12 +79,14 @@ input{
   position: relative
 }
 .recommend-item{
-  width: 330rpx;
-  margin: 20rpx 0rpx 20rpx 30rpx;
-  padding-bottom: 20rpx;
+  width: 315rpx;
+  margin: 20rpx 0rpx 20rpx 45rpx;
   text-align: center;
   background: #fff;
-  float: left
+  float: left;
+  padding:15rpx;
+  box-shadow:0 0 5px 6px #DBD9DA;
+  box-sizing:border-box;
 }
 .shop-img{
   width: 50rpx;
@@ -84,5 +100,15 @@ input{
   color: #666
 }
 .h1{
-  text-align: center
+  text-align: left;
+  font-size:1.1rem;
+  font-weight:500;
+  margin:15rpx 35rpx;
+}
+.slide-image{
+  height: 350rpx;
+  box-shadow:2px 2px 3px #aaaaaa;
+}
+page{
+  background: #fff
 }

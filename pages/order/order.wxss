@@ -4,7 +4,8 @@
   font-size:0.7rem;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 20rpx;
+  margin: 25rpx;
+  box-shadow: 0 5rpx 4px 3px #DBD9DA;
 }
 .list-item{
   display: flex;
@@ -13,6 +14,7 @@
   border-bottom: 5rpx solid #F5F6F5;
   padding: 10rpx 30rpx 10rpx 0;
   margin: 25rpx;
+  box-shadow: 0 5rpx 4px 3px #DBD9DA;
 }
 .header>view{
   height:50rpx;
@@ -21,7 +23,7 @@
   line-height:50rpx;
 }
 .chosed{
-  border-bottom: 3rpx solid red
+  border-bottom: 5rpx solid #5FABFF
 }
 .list-item>image{
   width: 200rpx;
@@ -55,5 +57,16 @@
   display: none
 }
 .header-order>view{
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  width: 30%;
+  height: 72rpx;
+  line-height: 72rpx
+}
+page{
+  background: #fff
+}
+/* 订单一级头部 */
+.header-order{
+  margin-top: 25rpx;
+  height: 73rpx;
 }

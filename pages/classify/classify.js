@@ -149,8 +149,8 @@ Page({
     })
     setTimeout(function () {
       self.setData({
-        toView: e.target.dataset.id,
-        curIndex: e.target.dataset.index
+        toView: e.currentTarget.dataset.id,
+        curIndex: e.currentTarget.dataset.index
       })
     }, 0)
     setTimeout(function () {

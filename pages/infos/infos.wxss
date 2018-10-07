@@ -1,3 +1,6 @@
+page{
+  background: #fff
+}
 .picker{
   text-align:center;
   float:right;
@@ -36,6 +39,8 @@ page{
   overflow: hidden;
   box-sizing: border-box;
   margin: 40rpx auto;
+  box-shadow: 0 5rpx 4px 3px #DBD9DA;
+  border-radius: 16rpx;
 }
 .infoItem{
   /* border: 5rpx solid #666; */
@@ -84,15 +89,15 @@ transform: translateX(0);
 }
 .h1{
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.9rem;
   text-align: left
 }
 .time{
   position:absolute;
-  right:0.5rem;
+  right:1rem;
   color:#aaa;
   font-size:32rpx;
-  top: 35rpx;
+  top: 17rpx;
 }
 .detailGroup{
   margin-top: 15px
@@ -103,11 +108,11 @@ transform: translateX(0);
   font-size: 30rpx
 }
 input{
-  background:#fff;
+  background:#F6F6F6;
   font-size:0.8rem;
   margin:20rpx;
   text-align:center;
-  border-radius: 10rpx
+  border-radius: 17rpx
 }
 .support, .noInfo{
   text-align: center;

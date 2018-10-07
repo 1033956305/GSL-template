@@ -16,7 +16,7 @@
   </view>
 </view>
 <view class='hot'  data-content='{{hot.content}}' bindtap='toProductList'>
-  <view class='h2'>
+  <view>
     <view class='h1'>优秀企业展示</view>
   </view>
   <image src='{{"https://cs.royalsecurity.cn/production/" + hot.pictureUrl}}'></image>

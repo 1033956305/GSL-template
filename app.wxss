@@ -9,7 +9,7 @@
   box-sizing: border-box;
 } 
 page{
-  background: #F5F6F5
+  background: #fff
 }
 .red{
   color: red

@@ -6,25 +6,28 @@ page,.main{
 }
 .categroy-left{
     float: left;
-    width: 170rpx;
+    width: 190rpx;
     height: 100%;
-    border-right: 1px solid #ddd;
     box-sizing: border-box;
     background: #fff;
+    margin-left: 25rpx
 }
 .categroy-left .cate-list{
-    height: 90rpx;
-    line-height: 90rpx;
-    text-align: center;
-    border-left: 3px solid #fff;
+  height:65rpx;
+  line-height:90rpx;
+  text-align:center;
+  background: #F6F6F6;
+  padding-top: 29rpx;
+  font-size: 0.9rem
 }
 .categroy-left .cate-list.on{
-    color: #AB956D;
-    border-color: #AB956D;
+  /* border-color:#5FABFF; */
+  font-weight:bold;
+  background: #fff
 }
 .categroy-right{
     float: right;
-    width: 580rpx;
+    width: 534rpx;
     height: 100%;
     overflow: hidden;
     
@@ -38,6 +41,7 @@ page,.main{
     display: block;
     width: 100%;
     height: 190rpx;
+    box-shadow: 0 5rpx 4px 3px #DBD9DA;
 }
 .cate-title{
     position: relative;
@@ -50,7 +54,7 @@ page,.main{
 }
 .cate-title::before{
     position: absolute;
-    left: 130rpx;
+    left: 90rpx;
     top: 43rpx;
     content: '';
     width: 70rpx;
@@ -59,7 +63,7 @@ page,.main{
 }
 .cate-title::after{
     position: absolute;
-    right: 130rpx;
+    right: 90rpx;
     top: 43rpx;
     content: '';
     width: 70rpx;
@@ -84,10 +88,20 @@ page,.main{
     margin-right: 0;
 }
 input{
-  background:#fff;
+  background:#F6F6F6;
   font-size:0.8rem;
-  margin:20rpx;
+  margin:25rpx;
   text-align:center;
-  border-radius: 10rpx;
-  border: 3rpx solid #999
+  border-radius:15rpx;
+}
+.cate-list>text{
+  width: 100%;
+  display: block;
+  /* background: #F6F6F6; */
+  height: 1rem;
+  line-height: 1rem;
+}
+.cate-list.on>text{
+  /* background: #fff */
+  border-left: 8rpx solid #5fabff
 }

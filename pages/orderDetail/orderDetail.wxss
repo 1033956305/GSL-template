@@ -1,31 +1,42 @@
+.body{
+  padding: 0 25rpx
+}
 .product-infos{
   background: #fff;
-  height:600rpx;
-  overflow:scroll;
+  height: 550rpx;
+  overflow: scroll;
 }
 .product-infos>view{
-  padding:15rpx 30rpx;
-  border-bottom:3rpx dashed #000;
+  padding:12rpx 30rpx;
+  border-bottom:3rpx solid #D5D5D5;
   color: #aaa;
 }
 .product-infos>.name{
-  color: #000;
+  color: #1A3D91;
+  border-bottom:6rpx solid #DADADA;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 1.3rem;
 }
 image{
-  width: 100%
+  width: 100%;
+  height: 250px;
 }
 .button{
   position: fixed;
-  bottom: 0rpx;
+  bottom: 20rpx;
   width: 100%
 }
 .button>button{
-  width: 50%;
-  display: inline-block;
+  width: 44%;
+  float: left;
+  box-shadow: 0 2rpx 4px 3px #DBD9DA;
 }
-.button>button:nth-child(2){
-  background-color:#f47920;
-  color: #fff
+.button>button:nth-child(3){
+  background-color:#5FABFF;
+  color: #fff;
+  box-shadow: 0 2rpx 4px 3px #A0CBFB;
+  margin-left: 30rpx;
 }
 .more{
   position: relative
@@ -41,4 +52,7 @@ image{
     border-right: 4rpx solid #7f7f7f;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+.hide{
+  display: none
 }

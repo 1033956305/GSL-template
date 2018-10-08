@@ -2,7 +2,6 @@
   background:#fff;
   margin:50rpx;
   padding:20rpx;
-  margin-top: 360rpx;
 }
 .more::after{
     position: absolute;
@@ -22,19 +21,28 @@
   border:3rpx solid #F5F6F5;
   width:95%;
   margin:0 auto;
+  border-radius: 25rpx;
+  box-shadow: 0 5rpx 2px 1px #DBD9DA;
 }
 textarea{
   border: 3rpx solid #F5F6F5;
   width: 100%;
+  box-sizing: border-box;
+  padding: 15rpx;
+  border-radius: 25rpx;
+  box-shadow: 0 5rpx 2px 1px #dbd9da;
 }
 .text{
-  width:95%;
+  width:100%;
   margin:0 auto;
   margin-top: 25rpx;
 }
 .btn{
-  background-color:#f47920;
+  width: 95%;
+  margin: 0 auto;
+  background-color:#5FABFF;
   color:#fff;
+  border-radius: 25rpx;
 }
 .toEvaluate{
   position:fixed;

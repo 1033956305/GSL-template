@@ -1,12 +1,15 @@
-<image src='{{"https://cs.royalsecurity.cn/production/" + info.pictureUrl}}'></image>
-<view class='product-infos'>
-  <view class='name'>手机联系：{{info.phone || '无'}}</view>
-  <view>座机联系电话：{{info.tel || '无'}}</view>
-  <view>QQ：{{info.qq || '无'}}</view>
-  <view>微信：{{info.wechat || '无'}}</view>
-  <view>传真：{{info.fax || '无'}}</view>
+<view class='body'>
+  <image src='{{"https://cs.royalsecurity.cn/production/" + info.pictureUrl}}'></image>
+  <view class='product-infos'>
+    <view class='name'>手机联系：{{info.phone || '无'}}</view>
+    <view>座机联系电话：{{info.tel || '无'}}</view>
+    <view>QQ：{{info.qq || '无'}}</view>
+    <view>微信：{{info.wechat || '无'}}</view>
+    <view>传真：{{info.fax || '无'}}</view>
+  </view>
+  <view class='button'>
+    <button bindtap='cancel'>取消</button>
+    <button bindtap='confirm'>确定下单</button>
+  </view>
 </view>
-<view class='button'>
-  <button bindtap='cancel'>取消</button>
-  <button bindtap='confirm'>确定下单</button>
-</view>
+

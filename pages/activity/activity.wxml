@@ -1,0 +1,21 @@
+
+<view class='header'>
+  <view data-id='0' class='{{list[0]}}' bindtap='change'>进行中</view>
+  <view data-id='1' class='{{list[1]}} {{type}}' bindtap='change'>待评论</view>
+  <view data-id='2' class='{{list[2]}}' bindtap='change'>已完成</view>
+  <!-- <view data-id='3' class='{{list[3]}}' bindtap='change'>已完成</view> -->
+</view>
+<!-- 订单列表 -->
+<view class='list'>
+  <view class='list-item' wx:for='{{orderList}}' wx:key='index' data-type='{{item.faType}}' data-sellUid='{{item.sellUid}}' data-id='{{item.id}}' bindtap='toDetail'>
+    <image src='{{"https://cs.royalsecurity.cn/production/" + item.pictureUrl}}'></image>
+    <view class='item-content'>
+      <view class='title'>{{item.productName}}</view>
+      <view class='detail'>
+      <text>{{uid === item.buyUid ? '您是买家' : (uid === item.sellUid ? '您是卖家' : '您是领导')}}</text>
+      <text class='state'>{{item.faType}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='{{noInfo}}'>————  没有更多数据了  ————</view>

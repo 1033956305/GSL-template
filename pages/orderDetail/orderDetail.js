@@ -11,6 +11,7 @@ Page({
     contact: {},
     btn1: '撤销订单',
     btn2: '确认订单',
+    isOpen: false,
     oid: '',
     info: {
       name: '大沙发所付付付付付',
@@ -91,6 +92,14 @@ Page({
           })
         }, 1000)
       }
+    })
+  },
+  openTransaction () {
+    if (!this.data.oid) {
+      return
+    }
+    wx.navigateTo({
+      url: '../openTransaction/openTransaction',
     })
   },
   confirm: function () {
@@ -233,6 +242,10 @@ Page({
             } else if (res.data.data.info === '买方' && res.data.data.orderForm.type === 2){
               btn2 = '您已确认'
             }
+          } else {
+            if (res.data.data.orderForm.type >= 6) {
+              that.isOpen = true
+            }
           }
           
           that.setData({
@@ -240,7 +253,8 @@ Page({
             contactBuy: res.data.data.contactBuy,
             product: res.data.data.product,
             btn2: btn2,
-            oid: res.data.data.id
+            oid: res.data.data.id,
+            isOpen: that.isOpen
           }, function () {
             wx.hideLoading()
           })

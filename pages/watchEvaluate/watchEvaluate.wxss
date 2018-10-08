@@ -19,9 +19,18 @@
   bottom:20rpx;
 }
 .btn{
-  background-color:#f47920;
+  width: 95%;
+  margin: 0 auto;
+  background-color:#5FABFF;
   color:#fff;
+  border-radius: 25rpx;
 }
 .hide{
   display: none
+}
+.buyer,.seller{
+  box-shadow: 0 2rpx 4px 3px #DBD9DA;
+  border-radius: 25rpx;
+  margin-bottom: 25rpx;
+  padding: 15rpx;
 }

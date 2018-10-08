@@ -67,11 +67,24 @@ Page({
       wx.switchTab({
         url: '../classify/classify',
       })
-    } else{
+    } else if (event.currentTarget.dataset.type === '活动') {
       wx.navigateTo({
-        url: '../list/list?value=' + event.currentTarget.dataset.type,
+        url: '../activity/activity',
       })
-    }
+    } else if (event.currentTarget.dataset.type === '扫描') {
+      wx.scanCode({
+        success: (res) => {
+          console.log(res)
+        },
+        fail: (res) => {
+          console.log(res)
+        }
+      })
+    } else if (event.currentTarget.dataset.type === '仲裁申请') {
+      wx.navigateTo({
+        url: '../arbitration/arbitration',
+      })
+    } 
   },
   toProduct: function (e) {
     if (getApp().globalData.roleId === '0') {

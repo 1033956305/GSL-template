@@ -1,0 +1,18 @@
+.input .form-control{
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 25rpx;
+  box-shadow: 0 2rpx 2px 1px #DBD9DA;
+  padding: 15rpx 20rpx;
+  border-radius: 20rpx;
+}
+.body{
+  padding-top: 25rpx;
+}
+.btn{
+  width: 92%;
+  margin: 80rpx auto;
+  background-color:#5FABFF;
+  color:#fff;
+  border-radius: 25rpx;
+}

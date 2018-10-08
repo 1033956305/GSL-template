@@ -1,27 +1,38 @@
+.body{
+  padding: 25rpx;
+}
 .item{
   background:#fff;
   border-bottom:3rpx solid #F5F6F5;
   margin-top:10rpx;
-  padding:10rpx 15rpx;
+  padding:20rpx 30rpx;
+  border-radius: 25rpx;
+  box-shadow: 0 2rpx 2px 1px #DBD9DA
 }
 .item>view{
   font-size:0.7rem;
-color:#aaa;
+  color:#aaa;
+  margin-bottom: 15rpx;
 }
 .header{
   color: #000;
   background: #fff;
-  padding: 20rpx 10rpx
+  padding: 20rpx 30rpx;
+  border-radius: 25rpx;
+  box-shadow: 0 2rpx 2px 1px #DBD9DA;
+  margin-bottom: 25rpx;
 }
 .item>.user{
-  color: #000
+  color: #000;
+  float: left;
+  margin-right: 195rpx;
 }
 .seller{
   width:50%;
-  margin-left:370rpx;
+  margin-left:324rpx;
   margin-top:20rpx;
 }
-.sellerName{
+.item>.sellerName{
   text-align:right;
   color:#000;
   margin-right:230rpx;

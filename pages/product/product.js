@@ -13,7 +13,7 @@ Page({
       puropose: '',
       volume: '',
       manufacturer: '',
-      pictureUrl: ''
+      pictureUrl: 'no-picture.png'
     }
   },
   toConnect: function () {

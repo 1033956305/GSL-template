@@ -7,7 +7,7 @@
     </view>
     <view class='pwd'>
       <image src='../../images/pwd.png'></image>
-      <input placeholder='请输入手机号' type='passward' password='true' name='pwd'></input>
+      <input placeholder='请输入密码' type='passward' password='true' name='pwd'></input>
     </view>
     <!-- <input placeholder='请输入密码' type='passward' name='pwd'></input> -->
   </view>

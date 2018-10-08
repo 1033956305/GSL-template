@@ -16,7 +16,6 @@
     领导已评价
     </view>
   </view>
-  
 </view>
 <view class='toEvaluate'>
   <button class='btn {{evaluate}}' bindtap='write'>填写评论</button>

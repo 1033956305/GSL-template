@@ -1,0 +1,27 @@
+<!--pages/openTransaction/openTransaction.wxml-->
+<view class='body'>
+  <form class='input'>
+    <view class='form-control'>
+      <!-- <text>发票代码</text> -->
+      <input placeholder='请输入发票代码'></input>
+    </view>
+    <view class='form-control'>
+      <!-- <text>发票号码</text> -->
+      <input placeholder='请输入发票号码'></input>
+    </view>
+    <view>
+      <!-- <text>开票日期</text> -->
+      <!-- <input placeholder='请输入开票日期'></input> -->
+      <picker mode="date" value="{{date}}" start="2016-09-01" end="2020-09-01" bindchange="bindDateChange">
+        <view class="picker form-control">
+          {{date? date: '请输入开票日期'}}
+        </view>
+      </picker>
+    </view>
+    <view class='form-control'>
+      <!-- <text>开具金额</text> -->
+      <input placeholder='请输入开具金额'></input>
+    </view>
+  </form>
+  <button class='btn' bindtap='confirmOpen'>确认公开</button>
+</view>

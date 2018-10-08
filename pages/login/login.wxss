@@ -7,7 +7,7 @@ page{
 }
 .input{
   position: absolute;
-  bottom: 375rpx;
+  bottom: 500rpx;
   width: 100%;
   /* left: 193rpx; */
 }
@@ -17,44 +17,49 @@ page{
 input{
   font-size: 0.8rem;
   color: rgb(173, 173, 173);
-  margin-top:20rpx;
+  margin-top:15rpx;
   display:block;
   margin-left:120rpx;
 }
 .login{
   position: absolute;
-  bottom:90rpx;
-  margin-left:22%;
-  width: 56%
+  bottom: 200rpx;
+  width: 100%;
 }
 .login>button:first-child{
   margin-bottom:35rpx;
   background: #1DABED;
+  box-shadow: 0 2rpx 2px 1px #1DABED;
 }
-button{
+.login>button{
   height:2rem;
-  width: 100%;
+  width: 73%;
   line-height:2rem;
   background: #FBE32A;
-  color: #fff
+  color: #fff;
+  border-radius: 33rpx;
 }
 .forget{
   position:absolute;
-  bottom:325rpx;
+  bottom:465rpx;
   right:50rpx;
-  color:#1DB294;
+  color:#54A1E6;
   font-size:0.8rem;
 }
 .userName>image, .pwd>image{
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   float: left;
+  margin-left: 20rpx;
+  margin-top: 10rpx;
 }
 .userName, .pwd{
   width:74%;
-  margin:0 auto;
-  height:40px;
+  margin:20rpx auto 50rpx;
+  height:35px;
   overflow:hidden;
   padding-bottom: 10rpx;
-  border-bottom: 3rpx solid #eee
+  border-bottom: 3rpx solid #eee;
+  border-radius: 35rpx;
+  box-shadow: 0 5rpx 4px 3px #DBD9DA;
 }

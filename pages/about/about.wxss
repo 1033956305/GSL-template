@@ -1,15 +1,19 @@
 /* @import '../../common/common.wxss'; */
-
+.main{
+  padding: 25rpx;
+}
 .header{
     position: relative;
     height: 250rpx;
     line-height: 100rpx;
     padding:30rpx 30rpx 30rpx 30rpx;
     box-sizing: border-box;
-    background: #AB956D;
+    background: #72B2FC;
     font-size: 28rpx;
     color: #fff;
     text-align: center;
+    box-shadow: 0 5rpx 4px 3px #72B2FC;
+    margin-bottom: 25rpx;
 }
 .header .thumb{
     /* position: absolute;
@@ -20,14 +24,13 @@
     border-radius: 50%;
 }
 .nickname{
-  display: block
+  display: block;
+  font-weight: bold;
 }
 .header .about{
     float: right;
 }
-
 .address-box{
-    border-bottom: 20rpx solid #ededed;
     color: #999;
     line-height: 90rpx;
     font-size: 28rpx;
@@ -62,7 +65,6 @@
 }
 
 .list-box{
-    color: #999;
     font-size: 28rpx;
 }
 .list-box>navigator{
@@ -77,7 +79,10 @@
 }
 
 navigator {
-  background: #fff
+  background: #fff;
+  border-radius: 28rpx;
+  margin-bottom: 25rpx;
+  box-shadow: 0 3rpx 4px 3px #DBD9DA;
 }
 .hide{
   display: none

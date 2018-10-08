@@ -3,5 +3,15 @@
   background: #fff;
   margin: 15rpx 20rpx;
   border-radius: 20rpx;
-  padding: 20rpx 15rpx
+  padding: 40rpx 30rpx;
+  box-shadow: 0 3rpx 4px 3px #DBD9DA;
+}
+.body>view{
+  color: #ADADAD;
+  font-size: 0.8rem;
+}
+.body>view.header{
+  color: #000;
+  font-size: 1.3rem;
+  margin-bottom: 25rpx;
 }

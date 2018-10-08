@@ -1,15 +1,18 @@
 <!--pages/product/product.wxml-->
-<image src='{{"https://cs.royalsecurity.cn/production/" + info.pictureUrl}}'></image>
-<view class='product-infos'>
-  <view class='name'>名称：{{info.name || '暂无'}}</view>
-  <view>介绍：{{info.introduction || '暂无'}}</view>
-  <view>型号：{{info.model || '暂无'}}</view>
-  <view>用途：{{info.puropose || '暂无'}}</view>
-  <view>体积：{{info.volume || '暂无'}}</view>
-  <view>生产厂商：{{info.manufacturer || '暂无'}}</view>
-  <view class='more' bindtap='toSeller'>卖方：{{info.nickname || '匿名'}}</view>
+<view class='body'>
+  <image src='{{"https://cs.royalsecurity.cn/production/" + info.pictureUrl}}'></image>
+  <view class='product-infos'>
+    <view class='name'>名称：{{info.name || '暂无'}}</view>
+    <view>介绍：{{info.introduction || '暂无'}}</view>
+    <view>型号：{{info.model || '暂无'}}</view>
+    <view>用途：{{info.puropose || '暂无'}}</view>
+    <view>体积：{{info.volume || '暂无'}}</view>
+    <view>生产厂商：{{info.manufacturer || '暂无'}}</view>
+    <view class='more' bindtap='toSeller'>卖方：{{info.nickname || '匿名'}}</view>
+  </view>
+  <view class='button'>
+    <button bindtap='toEvaluate'>查看评价</button>
+    <button bindtap='toConnect'>联系方式</button>
+  </view>
 </view>
-<view class='button'>
-  <button bindtap='toEvaluate'>查看评价</button>
-  <button bindtap='toConnect'>联系方式</button>
-</view>
+

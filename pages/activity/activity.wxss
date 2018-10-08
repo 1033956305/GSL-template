@@ -1,11 +1,29 @@
+/* pages/order/order.wxss */
+.header{
+  background:#fff;
+  font-size:0.7rem;
+  display: flex;
+  justify-content: space-around;
+  margin: 25rpx;
+  box-shadow: 0 5rpx 4px 3px #DBD9DA;
+}
 .list-item{
   display: flex;
   justify-content: flex-start;
   background: #fff;
   border-bottom: 5rpx solid #F5F6F5;
-  padding: 10rpx 0;
-  margin-bottom: 22rpx;
+  padding: 10rpx 30rpx 10rpx 0;
+  margin: 25rpx;
   box-shadow: 0 5rpx 4px 3px #DBD9DA;
+}
+.header>view{
+  height:50rpx;
+  width: 21%;
+  text-align: center;
+  line-height:50rpx;
+}
+.chosed{
+  border-bottom: 5rpx solid #5FABFF
 }
 .list-item>image{
   width: 200rpx;
@@ -27,14 +45,7 @@
 .state{
   float: right;
 }
-.support, .noInfo{
-  text-align: center;
-  font-size: 0.7rem;
-  color: #666;
-  margin-top: 50rpx;
-}
-.show{
-  margin:350rpx 0;
+.noInfo{
   text-align: center;
   font-size: 0.7rem;
   color: #666;
@@ -42,6 +53,9 @@
 .hide{
   display: none
 }
-.list{
-  padding: 25rpx;
+.others{
+  display: none
+}
+page{
+  background: #fff
 }

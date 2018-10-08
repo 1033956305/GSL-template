@@ -1,20 +1,22 @@
-<view class='header'>
-  总体评价： {{evaluate}}
-</view>
-<view class='evaluate-items'>
-  <view class='item' wx:for='{{infos}}' wx:key='index'>
-    <view class='user'>
-    {{item.buyName}}
-    </view>
-    <view class='time'>{{item.createtime}}</view>
-    <view class='content'>
-    {{item.buyContent || '暂无评论'}}
-    </view>
-    <view class='sellerName'>卖家</view>
-    <view class='seller'>{{item.sellContent || '暂无评论'}}</view>
+<view class='body'>
+  <view class='header'>
+    总体评价： {{evaluate}}
   </view>
-</view>
-<view class='{{noInfo}}'>————  没有更多数据了  ————</view>
-<view class='support'>
-  技术支持由 南京御安神科技有限公司 提供
+  <view class='evaluate-items'>
+    <view class='item' wx:for='{{infos}}' wx:key='index'>
+      <view class='user'>
+      {{item.buyName}}评论:
+      </view>
+      <view class='time'>{{item.createtime}}</view>
+      <view class='content'>
+      　　{{item.buyContent || '暂无评论'}}
+      </view>
+      <view class='sellerName'>卖家评论:</view>
+      <view class='seller'>　　{{item.sellContent || '暂无评论'}}</view>
+    </view>
+  </view>
+  <view class='{{noInfo}}'>————  没有更多数据了  ————</view>
+  <view class='support'>
+    技术支持由 南京御安神科技有限公司 提供
+  </view>
 </view>

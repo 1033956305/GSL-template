@@ -20,6 +20,9 @@
     "pages/order/order",
     "pages/about/about",
     "pages/index/index",
+    "pages/activity/activity",
+    "pages/arbitration/arbitration",
+    "pages/openTransaction/openTransaction",
     "pages/logs/logs"
   ],
   "enablePullDownRefresh": true,

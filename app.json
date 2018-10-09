@@ -22,7 +22,9 @@
     "pages/index/index",
     "pages/activity/activity",
     "pages/arbitration/arbitration",
+    "pages/company/company",
     "pages/openTransaction/openTransaction",
+    "pages/openTransactionList/openTransactionList",
     "pages/logs/logs"
   ],
   "enablePullDownRefresh": true,

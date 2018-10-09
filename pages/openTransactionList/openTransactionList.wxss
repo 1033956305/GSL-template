@@ -1,0 +1,47 @@
+.list-item{
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+  border-bottom: 5rpx solid #F5F6F5;
+  padding: 10rpx 0;
+  margin-bottom: 22rpx;
+  box-shadow: 0 5rpx 4px 3px #DBD9DA;
+}
+.list-item>image{
+  width: 200rpx;
+  height: 140rpx;
+  margin-left: 20rpx;
+}
+.detail>text{
+  color: #aaa;
+  font-size: 0.7rem
+}
+.detail{
+  margin-top: 35rpx;
+  line-height: 0.7rem;
+}
+.item-content{
+  width: 500rpx;
+  margin-left: 20rpx;
+}
+.state{
+  float: right;
+}
+.support, .noInfo{
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 50rpx;
+}
+.show{
+  margin:350rpx 0;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666;
+}
+.hide{
+  display: none
+}
+.list{
+  padding: 25rpx;
+}

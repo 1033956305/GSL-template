@@ -12,6 +12,7 @@ Page({
     btn1: '撤销订单',
     btn2: '确认订单',
     isOpen: false,
+    arbitration: false,
     oid: '',
     info: {
       name: '大沙发所付付付付付',
@@ -193,6 +194,28 @@ Page({
       url: '../product/product?id=' + id,
     })
   },
+  // 申请仲裁
+  arbitrating () {
+    wx.showModal({
+      title: '申请仲裁',
+      content: '是否要申请仲裁？',
+      showCancel: true,//是否显示取消按钮
+      cancelText: "否",//默认是“取消”
+      cancelColor: 'skyblue',//取消文字的颜色
+      confirmText: "是",//默认是“确定”
+      confirmColor: 'skyblue',//确定文字的颜色
+      success: function (res) {
+        if (res.cancel) {
+          //点击取消,默认隐藏弹框
+        } else {
+          //点击确定
+          console.log(res)
+        }
+      },
+      fail: res => { },//接口调用失败的回调函数
+      complete: res => { },//接口调用结束的回调函数（调用成功、失败都会执行）
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -243,8 +266,11 @@ Page({
               btn2 = '您已确认'
             }
           } else {
-            if (res.data.data.orderForm.type >= 6) {
-              that.isOpen = true
+            if (res.data.data.orderForm.type >= 6 && res.data.data.info === '买方' ) {
+              that.data.isOpen = true
+            }
+            if (res.data.data.info === '买方' && options.type === '已完成') {
+              that.data.arbitration = true
             }
           }
           
@@ -254,7 +280,8 @@ Page({
             product: res.data.data.product,
             btn2: btn2,
             oid: res.data.data.id,
-            isOpen: that.isOpen
+            isOpen: that.data.isOpen,
+            arbitration: that.data.arbitration
           }, function () {
             wx.hideLoading()
           })
@@ -274,7 +301,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    console.log(123)
   },
 
   /**

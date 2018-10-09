@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    date: ''
+    date: '',
+    show: true
   },
   bindDateChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -14,7 +15,16 @@ Page({
     })
   },
   confirmOpen () {
-    
+    wx.showToast({
+      title: '操作成功',
+      complete: res => {
+        console.log(res)
+        setTimeout(function () {
+          wx.navigateBack(1)
+        }, 2000)
+      }
+    })
+    // wx.navigateBack(1)
   },
   /**
    * 生命周期函数--监听页面加载

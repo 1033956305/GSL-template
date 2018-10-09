@@ -15,12 +15,16 @@
     <text>{{item.content}}</text>
   </view>
 </view>
-<view class='hot'  data-content='{{hot.content}}' bindtap='toProductList'>
+<view class='hot company'  data-content='{{hot.content}}' bindtap='toProductList'>
   <view>
     <view class='h1'>优秀企业展示</view>
   </view>
-  <image src='{{"https://cs.royalsecurity.cn/production/" + hot.pictureUrl}}'></image>
-  <image src='{{"https://cs.royalsecurity.cn/production/" + hot.pictureUrl}}'></image>
+  <view wx:for="{{companies}}" wx:key="index" bindtap="toCompany" data-id="{{item.id}}">
+    <image src='{{"https://cs.royalsecurity.cn/production/" + (item.picture || "no-picture.png")}}'></image>
+    <text>{{item.name}}</text>
+  </view>
+  
+  <!-- <image src='{{"https://cs.royalsecurity.cn/production/" + hot.pictureUrl}}'></image> -->
 </view>
 <view class='hot'  data-content='{{hot.content}}' bindtap='toProductList'>
   <view class='h2'>

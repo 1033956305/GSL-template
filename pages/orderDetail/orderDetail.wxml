@@ -17,6 +17,7 @@
     <view>座机联系电话：{{contactBuy.tel || '无'}}</view>
     <view>QQ：{{contactBuy.qq || '无'}}</view>
     <view>微信：{{contactBuy.wechat || '无'}}</view>
+    <view class='more red {{arbitration? "show": "hide"}}' bindtap='arbitrating'> 申请仲裁 </view>
   </view>
   <view class='button'>
     <button class='{{!isOpen? "show": "hide"}}' bindtap='cancel'>{{btn1}}</button>

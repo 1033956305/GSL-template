@@ -43,17 +43,28 @@ input{
   font-size: 0.7rem;
   /* margin: 15rpx 35rpx; */
 }
+.hot{
+  text-align: center
+}
+.hot>view>text{
+  color: red
+}
+.company>view>text{
+  color: #888;
+  display: inline-block;
+  width: 62%
+}
 .hot>.h2{
   text-align:left;
   font-size:1.1rem;
   font-weight:500;
   margin:15rpx 35rpx;
 }
-.hot>image{
+.hot>image, .hot>view>image{
   height:360rpx;
   border-radius:50rpx;
   box-shadow:0 0 5px 6px #DBD9DA;
-  margin:25rpx auto 70rpx;
+  margin:25rpx auto 25rpx;
   width:92%;
   display:block;
 }

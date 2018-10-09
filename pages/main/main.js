@@ -25,7 +25,7 @@ Page({
         content: '仲裁申请'
       },
       {
-        src: '../../images/1.png',
+        src: '../../images/5.png',
         content: '交易公开'
       },
       {
@@ -37,6 +37,7 @@ Page({
       pictureUrl: 'no-picture.png',
       content: '',
     },
+    companies: [],
     recommends: [
       // {
       //   minipicUrl: '../../images/1.png',
@@ -84,6 +85,10 @@ Page({
       wx.navigateTo({
         url: '../arbitration/arbitration',
       })
+    } else if (event.currentTarget.dataset.type === '交易公开') {
+      wx.navigateTo({
+        url: '../openTransactionList/openTransactionList',
+      })
     } 
   },
   toProduct: function (e) {
@@ -115,6 +120,12 @@ Page({
       url: '../infoDetail/infoDetail?id=' + e.currentTarget.dataset.id,
     })
   },
+  toCompany (e) {
+    console.log(e.currentTarget.dataset.id)
+    wx.navigateTo({
+      url: '../company/company?id=' + e.currentTarget.dataset.id,
+    })
+  },
   toProductList: function (e) {
     wx.navigateTo({
       url: '../list/list?value=' + e.currentTarget.dataset.content,
@@ -138,6 +149,7 @@ Page({
           })
         } else if (res.statusCode === 200) {
           that.setData({
+            companies: res.data.data.companies,
             imgUrls: res.data.data.messages,
             hot: res.data.data.advertising,
             recommends: res.data.data.products,

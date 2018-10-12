@@ -1,0 +1,29 @@
+<!-- <view class='body'>
+  <view class='company-infos'>
+    <view class='name'>活动名称：{{info.activityName || '暂无'}}</view>
+    <view>活动地点：{{info.activiryLocation || '暂无'}}</view>
+    <view>开始时间：{{info.startTime || '暂无'}}</view>
+    <view>结束时间：{{info.endTime || '暂无'}}</view>
+  </view>
+  <view class='button {{isClose==="0" ? "show": "hide"}}'>
+    <button data-type='0' bindtap='confirm'>不认可</button>
+    <button data-type='1' bindtap='confirm'>认可</button>
+  </view>
+</view> -->
+<view class='body'>
+  <view class='header'>
+    {{info.activityName}}
+  </view>
+  <view class='content'>
+    <view>活动地点：{{info.activiryLocation || '暂无'}}</view>
+    <view>开始时间：{{info.startTime || '暂无'}}</view>
+    <view>结束时间：{{info.endTime || '暂无'}}</view>
+  </view>
+  <view class='button {{isClose==="0" ? "show": "hide"}}'>
+    <!-- <button data-type='0' bindtap='confirm'>不认可</button>
+    <button data-type='1' bindtap='confirm'>认可</button> -->
+    <button class='{{isSignUp ? "" : "hide"}} blue' bindtap='signUp'>报名参加</button>
+    <button class='{{isEvaluate ? "" : "hide"}} blue' bindtap='evaluate'>评价</button>
+  </view>
+</view>
+

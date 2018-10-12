@@ -1,1 +1,63 @@
-/* pages/arbitration/arbitration.wxss */
+/* pages/order/order.wxss */
+.header{
+  background:#fff;
+  font-size:0.7rem;
+  display: flex;
+  justify-content: space-around;
+  margin: 25rpx;
+  box-shadow: 0 5rpx 4px 3px #DBD9DA;
+}
+.list-item{
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+  border-bottom: 5rpx solid #F5F6F5;
+  padding: 10rpx 30rpx 10rpx 0;
+  margin: 25rpx;
+  box-shadow: 0 5rpx 4px 3px #DBD9DA;
+}
+.header>view{
+  height:50rpx;
+  width: 21%;
+  text-align: center;
+  line-height:50rpx;
+}
+.chosed{
+  border-bottom: 5rpx solid #5FABFF
+}
+.list-item>image{
+  width: 200rpx;
+  height: 140rpx;
+  margin-left: 20rpx;
+}
+.detail>text{
+  color: #aaa;
+  font-size: 0.7rem
+}
+.detail{
+  margin-top: 35rpx;
+  line-height: 0.7rem;
+}
+.item-content{
+  width: 500rpx;
+  margin-left: 20rpx;
+}
+.state{
+  float: right;
+  margin-top: -73rpx;
+  margin-right: 25rpx;
+}
+.noInfo{
+  text-align: center;
+  font-size: 0.7rem;
+  color: #666;
+}
+.hide{
+  display: none
+}
+.others{
+  display: none
+}
+page{
+  background: #fff
+}

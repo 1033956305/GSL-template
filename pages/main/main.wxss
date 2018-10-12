@@ -123,3 +123,18 @@ input{
 page{
   background: #fff
 }
+[data-type="活动"] {
+  color: #FFC631
+}
+[data-type="扫描"] {
+  color: #91C0FF
+}
+[data-type="仲裁申请"] {
+  color: #FF3100
+}
+[data-type="交易公开"] {
+  color: #C484FF
+}
+[data-type="全部"] {
+  color: #F96E07
+}

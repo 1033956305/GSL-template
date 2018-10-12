@@ -1,0 +1,17 @@
+<view class='body'>
+  <image src='{{"https://cs.royalsecurity.cn/production/" + (info.pictureUrl || "no-picture.png")}}'></image>
+  <view class='company-infos'>
+    <view class='name'>商品名称：{{info.name || '暂无'}}</view>
+    <view>买方：{{info.buyNickName || '暂无'}}</view>
+    <!-- <view>买方评价：{{state[info.buyType-1] || '暂无'}}</view>
+    <view>评价内容：{{info.buyContent || '暂无'}}</view> -->
+    <view>卖方：{{info.sellNickName || '暂无'}}</view>
+    <!-- <view>卖方评价：{{state[info.sellType - 1] || '暂无'}}</view>
+    <view>评价内容：{{info.sellContent || '暂无'}}</view> -->
+    <view>发票代码：{{info.invoiceCode || '暂无'}}</view>
+    <view>发票号码：{{info.invoiceNumber || '暂无'}}</view>
+    <view>开票日期：{{info.invoiceDate || '暂无'}}</view>
+    <view>开具金额：{{info.invoiceSum || '暂无'}}</view>
+  </view>
+</view>
+

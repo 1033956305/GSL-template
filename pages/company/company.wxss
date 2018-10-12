@@ -12,7 +12,7 @@
 .company-infos>.name{
   color: #1A3D91;
   border-bottom:6rpx solid #DADADA;
-  height: 80rpx;
+  min-height: 80rpx;
   line-height: 80rpx;
   font-size: 1.3rem;
 }

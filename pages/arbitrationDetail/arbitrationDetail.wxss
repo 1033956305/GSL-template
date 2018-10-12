@@ -7,20 +7,21 @@
   display:flex;
   flex-direction:column;
 }
-.product-infos{
+.company-infos{
   background: #fff;
+  margin-bottom: 25rpx;
   height: 47%;
   overflow: scroll;
 }
-.product-infos>view{
+.company-infos>view{
   padding:12rpx 30rpx;
   border-bottom:3rpx solid #D5D5D5;
   color: #aaa;
 }
-.product-infos>.name{
+.company-infos>.name{
   color: #1A3D91;
   border-bottom:6rpx solid #DADADA;
-  height: 80rpx;
+  min-height: 80rpx;
   line-height: 80rpx;
   font-size: 1.3rem;
 }
@@ -30,15 +31,15 @@ image{
 }
 .button{
   position: fixed;
-  bottom: 20rpx;
+  bottom: 5rpx;
   width: 100%
 }
 .button>button{
   width: 44%;
-  float: left;
+  display: inline-block;
   box-shadow: 0 2rpx 4px 3px #DBD9DA;
 }
-.button>button:nth-child(3){
+.button>button:nth-child(2){
   background-color:#5FABFF;
   color: #fff;
   box-shadow: 0 2rpx 4px 3px #A0CBFB;
@@ -61,7 +62,4 @@ image{
 }
 .hide{
   display: none
-}
-.product-infos>.red{
-  color: red
 }

@@ -24,4 +24,12 @@
     <button class='{{isOpen? "show": "hide"}}' bindtap='openTransaction'>公开交易</button>
     <button bindtap='confirm'>{{btn2}}</button>
   </view>
+  <modal hidden="{{hiddenmodalput}}" 
+  title="请输入理由" confirm-text="提交" 
+  cancel-text="取消" 
+  bindcancel="cancelReason" bindconfirm="confirmReason">  
+    <!-- <form> -->
+      <input type='text'placeholder="请输入质疑的理由" bindinput='bindinput' name='reason'  auto-focus/>
+    <!-- </form>   -->
+  </modal>
 </view>

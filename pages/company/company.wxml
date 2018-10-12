@@ -3,6 +3,7 @@
   <view class='company-infos'>
     <view class='name'>名称：{{info.name || '暂无'}}</view>
     <view>公司简介：{{info.coSynopsis || '暂无'}}</view>
+    <view>公司地址：{{info.address || '暂无'}}</view>
     <view>公司网站：{{info.webAddress || '暂无'}}</view>
     <view>主营产品：{{info.mainProduct || '暂无'}}</view>
     <view>联系人：{{info.linkman || '暂无'}}</view>

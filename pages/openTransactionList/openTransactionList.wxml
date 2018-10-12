@@ -1,11 +1,11 @@
 <!-- 订单列表 -->
 <view class='list'>
-  <view class='list-item' wx:for='{{orderList}}' wx:key='index' bindtap='toProduct' data-id='{{item.id}}'>
+  <view class='list-item' wx:for='{{orderList}}' wx:key='index' bindtap='toDetail' data-id='{{item.id}}'>
     <image src='{{"https://cs.royalsecurity.cn/production/" + item.minipicUrl}}'></image>
     <view class='item-content'>
-      <view class='title'>{{item.name}}</view>
+      <view class='title'>交易公开</view>
       <view class='detail'>
-      <text>{{item.introduction}}</text>
+      <text>此交易于{{item.invoiceDate}}公开</text>
       </view>
     </view>
   </view>

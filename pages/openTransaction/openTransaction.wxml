@@ -1,13 +1,13 @@
 <!--pages/openTransaction/openTransaction.wxml-->
-<view class='body'>
-  <form class='input'>
+<form class='body' bindsubmit='confirmOpen'>
+  <view class='input'>
     <view class='form-control'>
       <!-- <text>发票代码</text> -->
-      <input placeholder='请输入发票代码'></input>
+      <input name='invoiceCode' placeholder='请输入发票代码'></input>
     </view>
     <view class='form-control'>
       <!-- <text>发票号码</text> -->
-      <input placeholder='请输入发票号码'></input>
+      <input name='invoiceNumber' placeholder='请输入发票号码'></input>
     </view>
     <view>
       <!-- <text>开票日期</text> -->
@@ -20,8 +20,8 @@
     </view>
     <view class='form-control'>
       <!-- <text>开具金额</text> -->
-      <input placeholder='请输入开具金额'></input>
+      <input name='invoiceSum' placeholder='请输入开具金额'></input>
     </view>
-  </form>
-  <button class='btn' bindtap='confirmOpen'>确认公开</button>
-</view>
+  </view>
+  <button class='btn' form-type='submit'>确认公开</button>
+</form>

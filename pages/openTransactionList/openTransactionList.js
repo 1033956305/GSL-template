@@ -17,7 +17,7 @@ Page({
     orderList: [
     ]
   },
-  toProduct: function (event) {
+  toDetail: function (event) {
     if (getApp().globalData.roleId === '0') {
       wx.showToast({
         title: '请登录...',
@@ -27,7 +27,7 @@ Page({
     }
     var id = event.currentTarget.dataset.id
     wx.navigateTo({
-      url: '../product/product?id=' + id,
+      url: '../openTransactionDetail/openTransactionDetail?oid=' + id,
     })
   },
   /**
@@ -43,7 +43,6 @@ Page({
     var noInfo = 'noInfo'
     // 关键字查询
     var data = {
-      name: '',
       pageSize: 10,
       pageCount: 1
     }
@@ -52,7 +51,7 @@ Page({
       type: 'value',
     })
     wx.request({
-      url: url + '/product/queryname',
+      url: url + '/inv/select',
       method: 'POST',
       data: data,
       header: {
@@ -133,75 +132,39 @@ Page({
       pageData: data
     })
     wx.showNavigationBarLoading();
-    if (this.data.type === 'value') {
-      wx.request({
-        url: url + '/product/queryname',
-        method: 'POST',
-        data: data,
-        header: {
-          'Authorization': getApp().globalData.Authorization
-        },
-        success: function (res) {
-          wx.hideLoading()
-          console.log(res)
-          if (res.statusCode === 401) {
-            wx.reLaunch({
-              url: '../login/login',
+    wx.request({
+      url: url + '/inv/select',
+      method: 'POST',
+      data: data,
+      header: {
+        'Authorization': getApp().globalData.Authorization
+      },
+      success: function (res) {
+        wx.hideLoading()
+        console.log(res)
+        if (res.statusCode === 401) {
+          wx.reLaunch({
+            url: '../login/login',
+          })
+        } else {
+          // 隐藏导航栏加载框
+          wx.hideNavigationBarLoading();
+          // 停止下拉动作
+          wx.stopPullDownRefresh();
+          if (res.data.data) {
+            that.setData({
+              orderList: res.data.data.PageInfo
             })
           } else {
-            // 隐藏导航栏加载框
-            wx.hideNavigationBarLoading();
-            // 停止下拉动作
-            wx.stopPullDownRefresh();
-            if (res.data.data) {
-              that.setData({
-                orderList: res.data.data.PageInfo
-              })
-            } else {
-              that.setData({
-                orderList: [],
-                nomore: 'show'
-              })
-            }
+            that.setData({
+              orderList: [],
+              nomore: 'show'
+            })
           }
+        }
 
-        }
-      })
-    } else if (this.data.type === 'type') {
-      wx.request({
-        url: url + '/product/select',
-        method: 'POST',
-        data: data,
-        header: {
-          'Authorization': getApp().globalData.Authorization
-        },
-        success: function (res) {
-          console.log(res)
-          wx.hideLoading()
-          if (res.statusCode === 401) {
-            wx.reLaunch({
-              url: '../login/login',
-            })
-          } else {
-            // 隐藏导航栏加载框
-            wx.hideNavigationBarLoading();
-            // 停止下拉动作
-            wx.stopPullDownRefresh();
-            if (res.data.data) {
-              that.setData({
-                orderList: res.data.data.PageInfo,
-                noInfo: 'hide'
-              })
-            } else {
-              that.setData({
-                orderList: [],
-                nomore: 'show'
-              })
-            }
-          }
-        }
-      })
-    }
+      }
+    })
   },
 
   /**
@@ -217,12 +180,7 @@ Page({
       pageData: data1
     })
 
-    var more = ''
-    if (this.data.type === 'type') {
-      more = '/product/select'
-    } else {
-      more = '/product/queryname'
-    }
+    var more = '/inv/select'
     // 判断是否需要加载
     if (this.data.noInfo === 'noInfo') {
       return

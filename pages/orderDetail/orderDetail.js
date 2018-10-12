@@ -8,6 +8,8 @@ Page({
     product: {
       pictureUrl: 'no-picture.png'
     },
+    hiddenmodalput: true, // 质疑提示框
+    reasonInput: '',
     contact: {},
     btn1: '撤销订单',
     btn2: '确认订单',
@@ -99,8 +101,38 @@ Page({
     if (!this.data.oid) {
       return
     }
-    wx.navigateTo({
-      url: '../openTransaction/openTransaction',
+    wx.request({
+      url: getApp().globalData.APP_CONSTANT + '/inv/queryOne',
+      method: 'POST',
+      header: {
+        'Authorization': getApp().globalData.Authorization
+      },
+      data: {
+        id: this.data.oid
+      },
+      success: res => {
+        if (res.statusCode === 401) {
+          wx.reLaunch({
+            url: '../login/login',
+          })
+        } else if (res.data.code === 200) {
+          console.log(res)
+          if (res.data.msg === '成功') {
+            wx.showToast({
+              title: '此订单交易已公开',
+              icon: 'none'
+            })
+          } else {
+            wx.navigateTo({
+              url: '../openTransaction/openTransaction?oid=' + this.data.oid,
+            })
+          }
+        } else if (res.data.msg === '交易未公开') {
+          wx.navigateTo({
+            url: '../openTransaction/openTransaction?oid=' + this.data.oid,
+          })
+        }
+      }
     })
   },
   confirm: function () {
@@ -194,26 +226,93 @@ Page({
       url: '../product/product?id=' + id,
     })
   },
+  bindinput (e) {
+    this.setData({
+      reasonInput: e.detail.value
+    })
+  },
+  cancelReason (e) {
+    this.setData({
+      hiddenmodalput: true
+    })
+  },
+  confirmReason (e) {
+    if (this.data.reasonInput) {
+      wx.request({
+        url: getApp().globalData.APP_CONSTANT + '/arb/add',
+        method: 'POST',
+        header: {
+          'Authorization': getApp().globalData.Authorization
+        },
+        data: {
+          oid: this.data.oid,
+          uid: getApp().globalData.id,
+          reason: this.data.reasonInput
+        },
+        success: res => {
+          if (res.statusCode === 401) {
+            wx.reLaunch({
+              url: '../login/login',
+            })
+          } else if (res.data.msg === '成功') {
+            console.log(res)
+            this.setData({
+              hiddenmodalput: true
+            })
+            wx.showToast({
+              title: '申请成功',
+            })
+          } else {
+            wx.showToast({
+              title: '申请失败',
+              icon: 'none'
+            })
+          }
+        }
+      })
+      this.setData({
+        hiddenmodalput: true
+      })
+    } else {
+      // this.setData({
+      //   hiddenmodalput: true
+      // })
+      wx.showToast({
+        title: '请填写理由',
+        icon: 'none'
+      })
+    }
+    console.log(e)
+  },
   // 申请仲裁
   arbitrating () {
-    wx.showModal({
-      title: '申请仲裁',
-      content: '是否要申请仲裁？',
-      showCancel: true,//是否显示取消按钮
-      cancelText: "否",//默认是“取消”
-      cancelColor: 'skyblue',//取消文字的颜色
-      confirmText: "是",//默认是“确定”
-      confirmColor: 'skyblue',//确定文字的颜色
-      success: function (res) {
-        if (res.cancel) {
-          //点击取消,默认隐藏弹框
-        } else {
-          //点击确定
-          console.log(res)
-        }
+    wx.request({
+      url: getApp().globalData.APP_CONSTANT + '/arb/inspect',
+      method: 'POST',
+      header: {
+        'Authorization': getApp().globalData.Authorization
       },
-      fail: res => { },//接口调用失败的回调函数
-      complete: res => { },//接口调用结束的回调函数（调用成功、失败都会执行）
+      data: {
+        oid: this.data.oid,
+        uid: getApp().globalData.id
+      },
+      success: res => {
+        if (res.statusCode === 401) {
+          wx.reLaunch({
+            url: '../login/login',
+          })
+        } else if (res.data.msg === '成功') {
+          console.log(res)
+          this.setData({
+            hiddenmodalput: false
+          })
+        } else {
+          wx.showToast({
+            title: '无法仲裁',
+            icon: 'none'
+          })
+        }
+      }
     })
   },
   /**
@@ -233,6 +332,7 @@ Page({
       btn2 = '查看评价'
     }
     this.setData({
+      oid: options.oid,
       type: options.type,
       btn1: btn1,
       btn2: btn2
@@ -269,7 +369,7 @@ Page({
             if (res.data.data.orderForm.type >= 6 && res.data.data.info === '买方' ) {
               that.data.isOpen = true
             }
-            if (res.data.data.info === '买方' && options.type === '已完成') {
+            if ((res.data.data.info === '买方' || res.data.data.info === '卖方') && options.type === '已完成') {
               that.data.arbitration = true
             }
           }
@@ -301,7 +401,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(123)
+    console.log(this.data.oid)
   },
 
   /**

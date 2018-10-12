@@ -198,7 +198,7 @@ Page({
     console.log(e)
     var that = this
     wx.showActionSheet({
-      itemList: ['差评', '中评', '好评'],
+      itemList: ['差评', '中评', '好评'], // 1 2 3
       success: function (res) {
         var list = ['差评', '中评', '好评']
         console.log(res.tapIndex)

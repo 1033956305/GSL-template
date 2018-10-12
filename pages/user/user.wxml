@@ -7,6 +7,7 @@
   <view class='name'>公司：{{info.name || '暂无信息'}}</view>
   <view>税号：{{info.taxId || '暂无信息'}}</view>
   <view>信誉积分：{{info.integral || '暂无信息'}} （{{info.integral<80?'信誉较差':(info.integral<120?'信誉良好':'信誉优秀')}}）</view>
+  <view>活动积分：{{info.actIntegral || '暂无信息'}}</view>
   <view>所属商会：{{info.coname || '暂无信息'}}</view>
   <view>经营商品：{{info.productList || '暂无信息'}}</view>
 </view>

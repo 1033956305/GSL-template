@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/login/login",
-    "pages/main/main",
     "pages/toEvaluate/toEvaluate",
+    "pages/main/main",
     "pages/forget/forget",
     "pages/classify/classify",
     "pages/product/product",
@@ -21,9 +21,12 @@
     "pages/about/about",
     "pages/index/index",
     "pages/activity/activity",
+    "pages/activityDetail/activityDetail",
     "pages/arbitration/arbitration",
+    "pages/arbitrationDetail/arbitrationDetail",
     "pages/company/company",
     "pages/openTransaction/openTransaction",
+    "pages/openTransactionDetail/openTransactionDetail",
     "pages/openTransactionList/openTransactionList",
     "pages/logs/logs"
   ],

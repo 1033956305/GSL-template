@@ -14,23 +14,75 @@ Page({
       date: e.detail.value
     })
   },
-  confirmOpen () {
-    wx.showToast({
-      title: '操作成功',
-      complete: res => {
-        console.log(res)
-        setTimeout(function () {
-          wx.navigateBack(1)
-        }, 2000)
+  confirmOpen (e) {
+    console.log(e)
+    if (e.detail.value.invoiceCode && e.detail.value.invoiceNumber && e.detail.value.invoiceSum && this.data.date) {
+      var info = {
+        invoiceCode: e.detail.value.invoiceCode,
+        invoiceNumber: e.detail.value.invoiceNumber,
+        invoiceSum: e.detail.value.invoiceSum,
+        invoiceDate: this.data.date,
+        oid: this.data.oid
       }
-    })
+      wx.showModal({
+        title: '公开交易',
+        content: '是否要公开本次交易？',
+        showCancel: true,//是否显示取消按钮
+        cancelText: "否",//默认是“取消”
+        cancelColor: 'skyblue',//取消文字的颜色
+        confirmText: "是",//默认是“确定”
+        confirmColor: 'skyblue',//确定文字的颜色
+        success: function (res) {
+          if (res.cancel) {
+            //点击取消,默认隐藏弹框
+          } else {
+            //点击确定
+            wx.showLoading({
+              title: '数据上传中...',
+            })
+            wx.request({
+              url: getApp().globalData.APP_CONSTANT + '/inv/add',
+              method: 'POST',
+              header: {
+                'Authorization': getApp().globalData.Authorization
+              },
+              data: info,
+              success: res => {
+                if (res.statusCode === 401) {
+                  wx.reLaunch({
+                    url: '../login/login',
+                  })
+                } else if (res.data.code === 200) {
+                  wx.hideLoading()
+                  wx.navigateBack(1)
+                }
+              }
+            })
+            console.log(res)
+          }
+        },
+        fail: res => { },//接口调用失败的回调函数
+        complete: res => { },//接口调用结束的回调函数（调用成功、失败都会执行）
+      })
+    } else {
+      wx.showToast({
+        title: '请填写完整',
+        icon: 'none'
+      })
+    }
+    
     // wx.navigateBack(1)
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    if (options.oid) {
+      this.setData({
+        oid: options.oid
+      })
+    }
   },
 
   /**

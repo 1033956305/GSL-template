@@ -39,11 +39,12 @@
   line-height: 0.7rem;
 }
 .item-content{
-  width: 500rpx;
+  width: 600rpx;
   margin-left: 20rpx;
 }
 .state{
   float: right;
+  margin-top: 3rpx;
 }
 .noInfo{
   text-align: center;

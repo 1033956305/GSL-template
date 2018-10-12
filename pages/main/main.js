@@ -76,6 +76,38 @@ Page({
       wx.scanCode({
         success: (res) => {
           console.log(res)
+          if (res.errMsg === 'scanCode:ok') {
+            var info = {
+              activityId: res.result.split(',')[0],
+              participator: getApp().globalData.id,
+              state: res.result.split(',')[1],
+            }
+            wx.request({
+              url: getApp().globalData.APP_CONSTANT + '/acpt/sign',
+              method: 'POST',
+              header: {
+                'Authorization': getApp().globalData.Authorization
+              },
+              data: info,
+              success(res) {
+                if (res.statusCode === 401) {
+                  wx.reLaunch({
+                    url: '../login/login',
+                  })
+                } else if (res.data.response === 'success') {
+                  wx.showToast({
+                    title: '签到成功',
+                  })
+                } else {
+                  wx.showToast({
+                    title: res.data.data.msg,
+                    icon: 'none'
+                  })
+                }
+              }
+            })
+            console.log(info)
+          }
         },
         fail: (res) => {
           console.log(res)

@@ -1,0 +1,19 @@
+<view class='body'>
+  <image src='{{"https://cs.royalsecurity.cn/production/" + (info.pictureUrl || "no-picture.png")}}'></image>
+  <view class='company-infos'>
+    <view class='name'>商品名称：{{info.name || '暂无'}}</view>
+    <view>买方：{{info.buyNickName || '暂无'}}</view>
+    <view class='{{isClose==="1" ? "show": "hide"}}'>买方评价：{{state[info.buyType-1] || '暂无'}}</view>
+    <view class='{{isClose==="1" ? "show": "hide"}}'>评价内容：{{info.buyContent || '暂无'}}</view>
+    <view>卖方：{{info.sellNickName || '暂无'}}</view>
+    <view class='{{isClose==="1" ? "show": "hide"}}'>卖方评价：{{state[info.sellType - 1] || '暂无'}}</view>
+    <view class='{{isClose==="1" ? "show": "hide"}}'>评价内容：{{info.sellContent || '暂无'}}</view>
+    <view>仲裁理由：{{info.reason || '暂无'}}</view>
+  </view>
+  <view class='button {{isClose==="0" ? "show": "hide"}}'>
+    <button data-type='0' bindtap='confirm'>不认可</button>
+    <button data-type='1' bindtap='confirm'>认可</button>
+  </view>
+</view>
+
+

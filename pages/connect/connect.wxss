@@ -1,8 +1,16 @@
 .body{
-  padding: 0 25rpx
+  padding: 0 25rpx;
+  height:100%;
+  position:fixed;
+  width:100%;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
 }
 .product-infos{
-  background: #fff
+  background: #fff;
+  height: 47%;
+  overflow: scroll;
 }
 .product-infos>view{
   padding:12rpx 30rpx;
@@ -18,7 +26,7 @@
 }
 image{
   width: 100%;
-  height: 250px;
+  height: 42%;
 }
 .button{
   position: fixed;

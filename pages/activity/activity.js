@@ -36,12 +36,11 @@ Page({
       var list = ['', '', '']
       list[index] = 'chosed'
       var data = {
-        uid: getApp().globalData.id,
         pageSize: 10,
         pageCount: 1,
-        operateId: 1
+        state: 1
       }
-      data.operateId = Number(index) + 1
+      data.state = Number(index) + 1
       this.setData({
         list: list,
         selectInfo: data
@@ -89,8 +88,8 @@ Page({
     console.log(e)
     // 跳转到订单详情
     wx.navigateTo({
-      url: '../orderDetail/orderDetail?id=' + e.currentTarget.dataset.id +
-        '&type=' + e.currentTarget.dataset.type
+      url: '../activityDetail/activityDetail?id=' + e.currentTarget.dataset.id +
+        '&type=' + this.data.selectInfo.state
     })
   },
   // 请求我的订单
@@ -100,7 +99,7 @@ Page({
       title: '努力加载中...',
     })
     wx.request({
-      url: getApp().globalData.APP_CONSTANT + '/orderForm/select',
+      url: getApp().globalData.APP_CONSTANT + '/activity/select',
       method: 'POST',
       header: {
         'Authorization': getApp().globalData.Authorization
@@ -109,12 +108,12 @@ Page({
       success(res) {
         console.log(res)
         var noInfo = 'hide'
-        if (res.data.code === 200) {
-          if (res.data.data.PageInfo.length === 0) {
+        if (res.data.response === 'success') {
+          if (res.data.data.list.length === 0) {
             noInfo = 'noInfo'
           }
           that.setData({
-            orderList: res.data.data.PageInfo,
+            orderList: res.data.data.list,
             noInfo: noInfo
           }, function () {
             wx.hideLoading()
@@ -131,6 +130,8 @@ Page({
       }
     })
   },
+  // 时间戳处理
+
   // 请求成员订单
   queryOthers: function (data, callback) {
     var that = this
@@ -192,10 +193,9 @@ Page({
    */
   onShow: function () {
     var data = {
-      uid: getApp().globalData.id,
       pageSize: 10,
       pageCount: 1,
-      operateId: this.data.selectInfo.operateId || 1
+      state: this.data.selectInfo.state || 1
     }
     this.setData({
       roleId: String(getApp().globalData.roleId),

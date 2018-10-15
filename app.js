@@ -20,7 +20,7 @@ App({
           })
           // return
           wx.request({
-            url: 'http://192.168.31.38:8080/gongshanglianmodel/wechat/openid',
+            url: 'https://cs.royalsecurity.cn/gongshanglianmodel/wechat/openid',
             data: data,
             method: 'POST',
             success: function (res) {
@@ -66,10 +66,10 @@ App({
   },
   globalData: {
     userInfo: null,
-    APP_CONSTANT: 'http://192.168.31.38:8080/gongshanglianmodel',
-    BACKEND_CONSTANT: 'http://192.168.31.38:8081/houtaimodel',
-    // BACKEND_CONSTANT: 'https://cs.royalsecurity.cn/houtaimodel',
-    // APP_CONSTANT: 'https://cs.royalsecurity.cn/gongshanglianmodel'
+    // APP_CONSTANT: 'http://192.168.31.38:8080/gongshanglianmodel',
+    // BACKEND_CONSTANT: 'http://192.168.31.38:8081/houtaimodel',
+    BACKEND_CONSTANT: 'https://cs.royalsecurity.cn/houtaimodel',
+    APP_CONSTANT: 'https://cs.royalsecurity.cn/gongshanglianmodel'
     // APP_CONSTANT: 'http://192.168.31.38:8082/gongshanglian'
   }
 })

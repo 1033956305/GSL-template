@@ -153,7 +153,6 @@ Page({
     })
   },
   toCompany (e) {
-    console.log(e.currentTarget.dataset.id)
     wx.navigateTo({
       url: '../company/company?id=' + e.currentTarget.dataset.id,
     })

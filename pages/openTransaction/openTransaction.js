@@ -28,14 +28,16 @@ Page({
         title: '公开交易',
         content: '是否要公开本次交易？',
         showCancel: true,//是否显示取消按钮
-        cancelText: "否",//默认是“取消”
-        cancelColor: 'skyblue',//取消文字的颜色
-        confirmText: "是",//默认是“确定”
-        confirmColor: 'skyblue',//确定文字的颜色
+        // cancelText: "否",//默认是“取消”
+        cancelColor: '#5FABFF',//取消文字的颜色
+        // confirmText: "是",//默认是“确定”
+        confirmColor: '#5FABFF',//确定文字的颜色
         success: function (res) {
+          // console.log(res)
+          // return
           if (res.cancel) {
             //点击取消,默认隐藏弹框
-          } else {
+          } else if (res.confirm) {
             //点击确定
             wx.showLoading({
               title: '数据上传中...',

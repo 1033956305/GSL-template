@@ -11,7 +11,8 @@ Page({
       qq: '',
       wechat: '',
       fax: '',
-      pictureUrl: ''
+      pictureUrl: '',
+      click: 0
     }
   },
   cancel: function () {
@@ -27,6 +28,7 @@ Page({
       })
       return
     }
+    
     var that = this
     wx.request({
       url: getApp().globalData.APP_CONSTANT + '/orderForm/insert',

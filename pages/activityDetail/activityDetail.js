@@ -67,7 +67,7 @@ Page({
       method: 'POST',
       data: {
         activityId: that.data.info.id,
-        evaluateId: getApp().globalData.id
+        participator: getApp().globalData.id
       },
       header: {
         'Authorization': getApp().globalData.Authorization

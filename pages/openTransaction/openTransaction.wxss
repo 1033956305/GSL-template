@@ -19,3 +19,6 @@
 .gray{
   color: #808090
 }
+.input{
+  padding-top: 50rpx
+}

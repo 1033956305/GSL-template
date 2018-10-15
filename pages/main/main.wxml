@@ -15,7 +15,7 @@
     <text>{{item.content}}</text>
   </view>
 </view>
-<view class='hot company'  data-content='{{hot.content}}' bindtap='toProductList'>
+<view class='hot company'  data-content='{{hot.content}}'>
   <view>
     <view class='h1'>优秀企业展示</view>
   </view>

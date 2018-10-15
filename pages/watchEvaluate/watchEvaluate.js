@@ -92,9 +92,6 @@ Page({
               leader = true
             }
           }
-          console.log(!res.data.data.evaluateDto.buyContent)
-          console.log(res.data.data.explain)
-          console.log(evaluate)
           that.setData({
             evaluation: res.data.data.evaluateDto,
             buyer: {
@@ -113,7 +110,12 @@ Page({
           }, function () {
             wx.hideLoading()
           })
-        }
+        } else if (res.data.response === 'error') {
+          wx.showToast({
+            title: res.data.data.msg,
+            icon: 'none',
+          })
+        } 
       }
     })
   },

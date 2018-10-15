@@ -29,7 +29,7 @@
   cancel-text="取消" 
   bindcancel="cancelReason" bindconfirm="confirmReason">  
     <!-- <form> -->
-      <input type='text'placeholder="请输入质疑的理由" bindinput='bindinput' name='reason'  auto-focus/>
+      <input type='text'placeholder="请输入质疑的理由" bindinput='bindinput' name='reason'/>
     <!-- </form>   -->
   </modal>
 </view>

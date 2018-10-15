@@ -332,7 +332,7 @@ Page({
       btn2 = '查看评价'
     }
     this.setData({
-      oid: options.oid,
+      oid: options.id,
       type: options.type,
       btn1: btn1,
       btn2: btn2

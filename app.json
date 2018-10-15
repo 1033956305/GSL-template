@@ -37,7 +37,7 @@
     "list": [
       {
         "pagePath": "pages/main/main",
-        "text": "工商联",
+        "text": "商会",
         "iconPath": "images/ic_menu_choice_nor.png",
         "selectedIconPath": "images/ic_menu_choice_pressed.png"
       },

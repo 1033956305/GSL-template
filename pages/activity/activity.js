@@ -85,7 +85,13 @@ Page({
     // }
   },
   toDetail: function (e) {
-    console.log(e)
+    if (getApp().globalData.roleId === '0') {
+      wx.showToast({
+        title: '请登录...',
+        icon: 'none'
+      })
+      return
+    }
     // 跳转到订单详情
     wx.navigateTo({
       url: '../activityDetail/activityDetail?id=' + e.currentTarget.dataset.id +

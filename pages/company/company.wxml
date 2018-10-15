@@ -1,5 +1,5 @@
 <view class='body'>
-  <image src='{{"https://cs.royalsecurity.cn/production/" + (info.pictureUrl || "no-picture.png")}}'></image>
+  <image src='{{"https://cs.royalsecurity.cn/production/" + (info.picture || "no-picture.png")}}'></image>
   <view class='company-infos'>
     <view class='name'>名称：{{info.name || '暂无'}}</view>
     <view>公司简介：{{info.coSynopsis || '暂无'}}</view>

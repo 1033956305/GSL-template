@@ -13,6 +13,7 @@ Page({
     totalType2: 3, // 卖方领导评价类型
     state: 1, // 展示方式 1 买方 2 卖方 3 全部
     evaluate: '',
+    click: 0,
     leader: false,
     items: {
       id: '',
@@ -31,6 +32,12 @@ Page({
     })
   },
   totalConfirm: function () {
+    if (this.data.click === 1) {
+      return
+    }
+    this.setData({
+      click: 1
+    })
     var data, type
     if (this.data.type === '买家') {
       if (this.data.evaluate.length < 15) {

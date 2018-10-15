@@ -81,6 +81,13 @@ Page({
     // }
   },
   toDetail: function (e) {
+    if (getApp().globalData.roleId === '0') {
+      wx.showToast({
+        title: '请登录...',
+        icon: 'none'
+      })
+      return
+    }
     if (this.data.list[1] === 'chosed') {
       wx.navigateTo({
         url: '../arbitrationDetail/arbitrationDetail?id=' + e.currentTarget.dataset.id + '&state=1'
